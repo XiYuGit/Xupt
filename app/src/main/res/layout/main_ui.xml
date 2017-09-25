@@ -21,7 +21,7 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="bottom"
             android:id="@+id/tabLayout"
-            android:background="#000"
+            android:background="#000088"
             app:tabIndicatorColor="@color/colorAccent"
             app:tabSelectedTextColor="@color/colorPrimaryDark"
             app:tabTextColor="@color/colorPrimary"
