@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         textView= findViewById(R.id.denglu) as TextView
         textView.setOnClickListener {
             var intent=Intent()
-            intent.setClass(this,MainUI::class.java)
+            intent.setClass(this, MainUI::class.java)
             startActivity(intent)
         }
     }
