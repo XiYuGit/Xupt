@@ -54,6 +54,7 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
         viewPager.setAdapter(fragmentAdpter)
         tabLayout.setupWithViewPager(viewPager,true)
         tabLayout.setTabsFromPagerAdapter(fragmentAdpter)
+        daohang.setOnClickListener(this)
     }
 
 
