@@ -1,16 +1,13 @@
 package com.project.xupt.View
 
-import android.app.ActionBar
-import android.graphics.drawable.GradientDrawable
+
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-
+import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.Gravity
 import android.view.MenuItem
 import android.view.View
 import com.project.xupt.FragmentAdapter
@@ -51,10 +48,6 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_ui)
-        var actionBar=getSupportActionBar()
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-        actionBar?.setHomeAsUpIndicator(R.drawable.daohang)
-        Log.e("ttttt",actionBar.toString())
         var titleList=setTitleList()
         var fragmentList=setFragmentList()
         var fragmentAdpter=FragmentAdapter(supportFragmentManager,titleList,fragmentList)
@@ -63,18 +56,18 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
         tabLayout.setTabsFromPagerAdapter(fragmentAdpter)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item!!.itemId){
 
-            R.id.home ->{Log.e("ttttt","ttttt")
-                drawerLayout.openDrawer(GravityCompat.START)}
-        }
 
-        return true
-    }
 
     override fun onClick(v: View?) {
+        if (v != null) {
+            when(v.id){
+                R.id.daohang->{
+                    drawerLayout.openDrawer(GravityCompat.START)
+                }
 
+            }
+        }
     }
 
 }

@@ -14,7 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            android:id="@+id/toolBar"
             android:minHeight="?attr/actionBarSize"
 
             app:popupTheme="@style/Theme.AppCompat.Light"
@@ -23,7 +22,7 @@
         <android.support.design.widget.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tabLayout"
+
             android:layout_gravity="bottom"
             android:background="?attr/colorPrimary"
             android:scrollbars="horizontal"
@@ -39,7 +38,7 @@
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/viewPager"
+
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         />
 </android.support.design.widget.CoordinatorLayout>
