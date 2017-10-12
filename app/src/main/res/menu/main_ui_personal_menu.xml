@@ -4,16 +4,15 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/aa"
-            android:title="aa"
-            android:icon="@drawable/daohang"
+            android:title="aaa"
             >
             <menu>
                 <item
-                    android:id="bb"
-                    android:title="bb"
+                    android:id="@id/item1"
+                    android:title="bbb"
                     android:icon="@drawable/daohang"/>
                 <item
-                    android:id="cc"
+                    android:id="@id/item2"
                     android:title="cc"
                     android:icon="@drawable/daohang"/>
             </menu>
