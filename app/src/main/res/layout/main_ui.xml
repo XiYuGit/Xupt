@@ -19,6 +19,7 @@
                 android:id="@+id/toolBar"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:contentInsetStart="0dp"
                 >
                 <ImageView
                     android:layout_width="?attr/actionBarSize"

@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<group >
-    <item
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/aa"
+            android:title="aa"
+            android:icon="@drawable/daohang"
+            >
+            <menu>
+                <item
+                    android:id="bb"
+                    android:title="bb"
+                    android:icon="@drawable/daohang"/>
+                <item
+                    android:id="cc"
+                    android:title="cc"
+                    android:icon="@drawable/daohang"/>
+            </menu>
 
-        android:id="@+id/item1"
-        android:title="1"
-        />
-    <item
-        android:id="@+id/item2"
-        android:title="2"
-        />
-    <item
-        android:id="@+id/item3"
-        android:title="3"
-        />
-    <item
-        android:id="@+id/item4"
-        android:title="4"
-        />
+        </item>
+    </group>
+    <group >
+        <item
+            android:icon="@drawable/daohang"
+            android:id="@+id/item1"
+            android:title="1"
+            />
+        <item
+            android:id="@+id/item2"
+            android:title="2"
+            />
+        <item
+            android:id="@+id/item3"
+            android:title="3"
+            />
+        <item
+            android:id="@+id/item4"
+            android:title="4"
+            />
 
-</group>
+    </group>
 </menu>

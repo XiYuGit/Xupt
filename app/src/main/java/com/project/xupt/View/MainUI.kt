@@ -3,11 +3,10 @@ package com.project.xupt.View
 
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import com.project.xupt.FragmentAdapter
@@ -29,31 +28,32 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
 
     }
 
-    fun setTitleList(): List<String> {
-        val titleList = ArrayList<String>()
-        titleList.add("课程表")
-        titleList.add("成绩")
-        titleList.add("其他")
-        return titleList
-    }
-
-    fun setFragmentList():List<Fragment>{
+    fun  initFragment():Boolean{
         var fragmentList=ArrayList<Fragment>()
         fragmentList.add(Fragment1())
         fragmentList.add(Fragment2())
         fragmentList.add(Fragment3())
-        return fragmentList
+        var fragmentAdpter=FragmentAdapter(supportFragmentManager,fragmentList)
+        viewPager.setAdapter(fragmentAdpter)
+        //设置是否开启ViewPager滑动
+
+       return true
+    }
+
+    fun initTab():Boolean{
+        tabLayout.setupWithViewPager(viewPager,true)
+        tabLayout.setTabMode(TabLayout.MODE_FIXED)
+        tabLayout.getTabAt(0)?.setText("课程表")?.setIcon(R.drawable.pic_classes)
+        tabLayout.getTabAt(1)?.setText("成绩")?.setIcon(R.drawable.pic_score)
+        tabLayout.getTabAt(2)?.setText("更多")?.setIcon(R.drawable.pic_more)
+        return true
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_ui)
-        var titleList=setTitleList()
-        var fragmentList=setFragmentList()
-        var fragmentAdpter=FragmentAdapter(supportFragmentManager,titleList,fragmentList)
-        viewPager.setAdapter(fragmentAdpter)
-        tabLayout.setupWithViewPager(viewPager,true)
-        tabLayout.setTabsFromPagerAdapter(fragmentAdpter)
+        initFragment()
+        initTab()
         daohang.setOnClickListener(this)
     }
 

@@ -7,11 +7,9 @@ import android.support.v4.app.FragmentPagerAdapter
 /**
  * Created by xiyu0 on 2017/9/25.
  */
-class FragmentAdapter(fm: FragmentManager?, titleList:List<String>, fragmentList: List<Fragment>) : FragmentPagerAdapter(fm) {
-    val listTitle:List<String>
+class FragmentAdapter(fm: FragmentManager?, fragmentList: List<Fragment>) : FragmentPagerAdapter(fm) {
     val listFragment:List<Fragment>
     init {
-        listTitle=titleList
         listFragment=fragmentList
     }
 
@@ -23,9 +21,4 @@ class FragmentAdapter(fm: FragmentManager?, titleList:List<String>, fragmentList
     override fun getCount(): Int {
         return listFragment.size
     }
-
-    override fun getPageTitle(position: Int): CharSequence {
-        return listTitle.get(position)
-    }
-
 }
