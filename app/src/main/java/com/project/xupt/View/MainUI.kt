@@ -7,8 +7,10 @@ import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import com.project.xupt.FragmentAdapter
 import com.project.xupt.Fragments.Fragment1
 import com.project.xupt.Fragments.Fragment2
@@ -24,6 +26,17 @@ class
 MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        Log.e("1234567",item.itemId.toString())
+        when(item.itemId){
+            R.id.nav_1 ->{
+                Toast.makeText(this,"nav1",Toast.LENGTH_SHORT).show()
+                Log.e("123","1234567")
+            }
+            R.id.nav_share ->{
+                Toast.makeText(this,"nav1",Toast.LENGTH_SHORT).show()
+                Log.e("123","1234567")
+            }
+        }
         return true
 
     }
@@ -45,7 +58,7 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
         tabLayout.setTabMode(TabLayout.MODE_FIXED)
         tabLayout.getTabAt(0)?.setText("课程表")?.setIcon(R.drawable.pic_classes)
         tabLayout.getTabAt(1)?.setText("成绩")?.setIcon(R.drawable.pic_score)
-        tabLayout.getTabAt(2)?.setText("更多")?.setIcon(R.drawable.pic_more)
+        tabLayout.getTabAt(2)?.setText("我")?.setIcon(R.drawable.pic_mine)
         return true
     }
 
@@ -55,6 +68,7 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
         initFragment()
         initTab()
         daohang.setOnClickListener(this)
+        navigationView.setNavigationItemSelectedListener(this)
     }
 
 

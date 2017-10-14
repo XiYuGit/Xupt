@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <group
         android:checkableBehavior="single">
+            <item
+                android:id="@id/nav_1"
+                android:title="bbb"
+                android:icon="@drawable/daohang"/>
+            <item
+                android:id="@id/nav_2"
+                android:title="cc"
+                android:icon="@drawable/daohang"/>
         <item
-            android:id="@+id/aa"
-            android:title="aaa"
-            >
-            <menu>
-                <item
-                    android:id="@id/item1"
-                    android:title="bbb"
-                    android:icon="@drawable/daohang"/>
-                <item
-                    android:id="@id/item2"
-                    android:title="cc"
-                    android:icon="@drawable/daohang"/>
-            </menu>
-
-        </item>
+            android:id="@id/nav_2"
+            android:title="cc"
+            android:icon="@drawable/daohang"/>
+        <item
+            android:id="@id/nav_2"
+            android:title="cc"
+            android:icon="@drawable/daohang"/>
     </group>
-    <group >
-        <item
-            android:icon="@drawable/daohang"
-            android:id="@+id/item1"
-            android:title="1"
-            />
-        <item
-            android:id="@+id/item2"
-            android:title="2"
-            />
-        <item
-            android:id="@+id/item3"
-            android:title="3"
-            />
-        <item
-            android:id="@+id/item4"
-            android:title="4"
-            />
 
-    </group>
+    <item android:title="系统">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/pic_girl"
+                android:title="主题设置"/>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/pic_girl"
+                android:title="更多"/>
+        </menu>
+    </item>
+
+
 </menu>
