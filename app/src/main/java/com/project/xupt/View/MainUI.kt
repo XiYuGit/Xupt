@@ -75,9 +75,6 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
         navigationView.setNavigationItemSelectedListener(this)
     }
 
-
-
-
     override fun onClick(v: View?) {
         if (v != null) {
             when(v.id){
