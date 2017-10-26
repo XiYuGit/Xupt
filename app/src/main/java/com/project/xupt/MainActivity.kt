@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.login_main)
         var textView:TextView
         textView= findViewById(R.id.denglu) as TextView
         textView.setOnClickListener {

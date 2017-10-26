@@ -80,8 +80,8 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
             when(v.id){
                 R.id.daohang->{
                     drawerLayout.openDrawer(GravityCompat.START)
-                }
 
+                }
             }
         }
     }
