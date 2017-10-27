@@ -62,7 +62,7 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
         tabLayout.setTabMode(TabLayout.MODE_FIXED)
         tabLayout.getTabAt(0)?.setText("课程表")?.setIcon(R.drawable.pic_classes)
         tabLayout.getTabAt(1)?.setText("成绩")?.setIcon(R.drawable.pic_score)
-        tabLayout.getTabAt(2)?.setText("我")?.setIcon(R.drawable.pic_mine)
+        tabLayout.getTabAt(2)?.setText("我的")?.setIcon(R.drawable.pic_mine)
         return true
     }
 
