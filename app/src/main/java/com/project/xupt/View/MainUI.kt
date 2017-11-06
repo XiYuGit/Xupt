@@ -21,9 +21,7 @@ import kotlinx.android.synthetic.main.main_ui.*
 /**
  * Created by xiyu0 on 2017/9/21.
  */
-class
-
-MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
+class MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         Log.e("1234567",item.itemId.toString())
@@ -42,7 +40,6 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
             }
         }
         return true
-
     }
 
     fun  initFragment():Boolean{
@@ -53,7 +50,6 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
         var fragmentAdpter=FragmentAdapter(supportFragmentManager,fragmentList)
         viewPager.setAdapter(fragmentAdpter)
         //设置是否开启ViewPager滑动
-
        return true
     }
 
@@ -80,7 +76,6 @@ MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigationIte
             when(v.id){
                 R.id.daohang->{
                     drawerLayout.openDrawer(GravityCompat.START)
-
                 }
             }
         }
