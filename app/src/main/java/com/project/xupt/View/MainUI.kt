@@ -28,7 +28,6 @@ class MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigat
         when(item.itemId){
             R.id.nav_1 ->{
                 Toast.makeText(this,"nav1",Toast.LENGTH_SHORT).show()
-                Log.e("123","1234567")
             }
             R.id.nav_share ->{
                 Toast.makeText(this,"nav1",Toast.LENGTH_SHORT).show()
@@ -36,7 +35,6 @@ class MainUI: AppCompatActivity(),View.OnClickListener, NavigationView.OnNavigat
             }
             R.id.nav_2->{
                 Toast.makeText(this,"nav1",Toast.LENGTH_SHORT).show()
-                Log.e("123","1234567")
             }
         }
         return true
